@@ -15,24 +15,29 @@ export default function TodoList() {
                         <Form.Label>Todo Item</Form.Label>
                         <Form.Control type="text" placeholder="Enter item"></Form.Control>
                     </Form.Group>
+                    <Form.Group className="mb-3" controlId="date">
+                        <Form.Label>Date</Form.Label>
+                        <Form.Control type="date" placeholder="Enter Date"></Form.Control>
+                    </Form.Group>
                     <Button variant="primary" type="submit">Add</Button>
                 </Form>
-                <Tab.Container activeKey="first">
+                <Tab.Container defaultActiveKey="#first">
                 <Row>
                     <Col>
                         <ListGroup>
-                            <ListGroupItem ><Nav.Link eventKey="first">Item 1</Nav.Link></ListGroupItem>
-                            <ListGroupItem ><Nav.Link eventKey="second">Item 2</Nav.Link> </ListGroupItem>
-                            <ListGroupItem ><Nav.Link eventKey="third">Item 2</Nav.Link></ListGroupItem>
+                           <ListGroup.Item action href="#first">First</ListGroup.Item>
+                           <ListGroup.Item action href="#second">second</ListGroup.Item>
+                           <ListGroup.Item action href="#third">third</ListGroup.Item>
+                           <ListGroup.Item action href="#fourth">fourth</ListGroup.Item>
                         </ListGroup>
                         </Col>
                         <Col>
                             <Tab.Content>
-                                <Tab.Pane eventKey="first">First Item</Tab.Pane>
-                                <Tab.Pane eventKey="second">Second Item</Tab.Pane>
-                                <Tab.Pane eventKey="third">Third Item</Tab.Pane>
+                                <Tab.Pane eventKey="#first">First Item</Tab.Pane>
+                                <Tab.Pane eventKey="#second">Second Item</Tab.Pane>
+                                <Tab.Pane eventKey="#third">Third Item</Tab.Pane>
+                                <Tab.Pane eventKey="#fourth">Fourth Item</Tab.Pane>
                             </Tab.Content>
-                        
                         </Col>
                 </Row>
                 </Tab.Container>
